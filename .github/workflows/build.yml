@@ -1,3 +1,15 @@
+name: Build Native Lib
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -13,7 +25,7 @@
         with:
           ndk-version: r25b
 
-      # TAMBAHKAN STEP INI untuk membuat gradlew secara otomatis
+      # Ini untuk mengatasi file gradlew yang hilang di repo kamu
       - name: Generate Gradle Wrapper
         run: gradle wrapper
 
