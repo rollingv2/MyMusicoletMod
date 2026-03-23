@@ -17,7 +17,7 @@ jobs:
         with:
           ndk-version: r25b
 
-            - name: Compile with Clang (Custom Name)
+      - name: Compile with Clang (Custom Name)
         run: |
           $ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang++ \
           -shared -fPIC \
