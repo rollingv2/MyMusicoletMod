@@ -26,8 +26,8 @@ jobs:
           native-lib.cpp \
           -llog
 
-      - name: Upload Artifact
+         - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: libpairipcore-so
-          path: libpairipcore.so
+          name: libpairipmod-so
+          path: libpairipmod.so
